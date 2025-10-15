@@ -1,8 +1,8 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { Feed } from './feed.entity';
-import { CreateFeedDto } from './create-feed.dto';
+import { Feed } from './entities/feed.entity';
+import { CreateFeedDto } from './dto/create-feed.dto';
 
 @Injectable()
 export class FeedService {

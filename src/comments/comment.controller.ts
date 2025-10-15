@@ -1,7 +1,7 @@
 import { Controller, Get, Post, Body, Param, ValidationPipe, ParseIntPipe } from '@nestjs/common';
 import { CommentService } from './comment.service';
-import { CreateCommentDto } from './create-comment.dto';
-import { Comment } from './comment.entity';
+import { CreateCommentDto } from './dto/create-comment.dto';
+import { Comment } from './entities/comment.entity';
 
 @Controller('feeds/:feedId/comments')
 export class CommentController {

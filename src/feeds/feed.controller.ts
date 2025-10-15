@@ -1,7 +1,7 @@
 import { Controller, Get, Post, Body, ValidationPipe } from '@nestjs/common';
 import { FeedService } from './feed.service';
-import { CreateFeedDto } from './create-feed.dto';
-import { Feed } from './feed.entity';
+import { CreateFeedDto } from './dto/create-feed.dto';
+import { Feed } from './entities/feed.entity';
 
 @Controller('feeds')
 export class FeedController {

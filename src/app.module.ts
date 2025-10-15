@@ -2,12 +2,10 @@ import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { Feed } from './feed.entity';
-import { FeedService } from './feed.service';
-import { FeedController } from './feed.controller';
-import { Comment } from './comment.entity';
-import { CommentService } from './comment.service';
-import { CommentController } from './comment.controller';
+import { Feed } from './feeds/entities/feed.entity';
+import { Comment } from './comments/entities/comment.entity';
+import { FeedModule } from './feeds/feed.module';
+import { CommentModule } from './comments/comment.module';
 
 @Module({
   imports: [
@@ -22,9 +20,10 @@ import { CommentController } from './comment.controller';
       synchronize: true,
       ssl: { rejectUnauthorized: false },
     }),
-    TypeOrmModule.forFeature([Feed, Comment]),
+    FeedModule,
+    CommentModule,
   ],
-  controllers: [AppController, FeedController, CommentController],
-  providers: [AppService, FeedService, CommentService],
+  controllers: [AppController],
+  providers: [AppService],
 })
 export class AppModule {}

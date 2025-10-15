@@ -1,5 +1,5 @@
 import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, JoinColumn } from 'typeorm';
-import { Feed } from './feed.entity';
+import { Feed } from 'src/feeds/entities/feed.entity';
 
 @Entity()
 export class Comment {
