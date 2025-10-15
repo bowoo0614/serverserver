@@ -6,7 +6,6 @@ import { Feed } from './feeds/entities/feed.entity';
 import { Comment } from './comments/entities/comment.entity';
 import { FeedModule } from './feeds/feed.module';
 import { CommentModule } from './comments/comment.module';
-
 @Module({
   imports: [
     TypeOrmModule.forRoot({
@@ -14,7 +13,7 @@ import { CommentModule } from './comments/comment.module';
       host: 'aws-1-ap-northeast-2.pooler.supabase.com',
       port: 6543,
       username: 'postgres.hupfyvybmqsymdjhpgld',
-      password: process.env.DB_PASSWORD,
+      password: "oBa59LkgwjHmWGJx",
       database: 'postgres',
       entities: [Feed, Comment],
       synchronize: true,
