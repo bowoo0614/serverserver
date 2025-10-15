@@ -7,7 +7,7 @@ async function bootstrap() {
   
   // Enable CORS for frontend
   app.enableCors({
-    origin: 'https://finalproject-production-77b5.up.railway.app/',
+    origin: 'https://finalproject-production-77b5.up.railway.app',
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true,
   });
